@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "RCUH Sub Project Mapping Table",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "RCUH Sub Project Mapping Table"
+  },
+  "ui5AppDetails": {
+    "appId": "subproject"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_1FD62FEA4586BA2F9611D21B2CF6A5D69B0F9181_TM",
+    "semanticObject": "zsubproject",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_1FD62FEA4586BA2F9611D21B2CF6A5D69B0F9181_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "RCUH Sub Project Mapping Table",
+        "subtitle": "Manage and Display Sub Project Mapping Table"
+      }
+    }
+  ]
+}

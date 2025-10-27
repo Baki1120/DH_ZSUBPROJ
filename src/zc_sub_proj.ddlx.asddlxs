@@ -1,0 +1,162 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Sub Project Table',
+    typeNamePlural: 'Sub Project Table',
+    title: {
+        type: #STANDARD,
+        label: 'Sub Project Table',
+        value: 'Uuid'
+    },
+    description: {
+        type: #STANDARD,
+        label: 'Sub Project Table',
+        value: 'Uuid'
+    }
+}
+
+@UI.deleteHidden: true
+annotate view ZC_SUB_PROJ with
+{
+  @EndUserText.label: 'Uuid'
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } , {
+  id: 'idChangeDocs',
+  type: #LINEITEM_REFERENCE,
+  label: 'Change Documents',
+  position: 20 ,
+  targetElement: '_ChangeDocs'
+  }  ]
+
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Uuid'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'Uuid'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  @UI.hidden: true
+  Uuid;
+
+  @UI.identification: [ {
+    position: 20,
+    label: 'Grant'
+  } ]
+  @UI.lineItem: [ {
+    position: 20,
+    label: 'Grant'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  @EndUserText.label: 'Grant'
+  @Consumption.valueHelpDefinition: [{ entity : {name: 'I_GrantStdVH', element: 'GrantID' }, useForValidation: true }]
+  ProjectNumber;
+
+  @UI.identification: [ {
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  @EndUserText.label: 'Campus Code'
+  CampusCode;
+
+  @UI.identification: [ {
+    position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  @EndUserText.label: 'Sub Project Number'
+  SubProjectNumber;
+
+  @UI.identification: [ {
+    position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  @EndUserText.label: 'Sub Project Name'
+  SubProjectName;
+
+  @UI.identification: [ {
+    position: 60
+  } ]
+  @UI.lineItem: [ {
+    position: 60
+  } ]
+  @EndUserText.label: 'Active'
+  Active;
+
+  @EndUserText.label: 'UuidApi'
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'UuidApi'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'UuidApi'
+  } ]
+  @UI.selectionField: [ {
+    position: 70
+  } ]
+  @UI.hidden: true
+  UuidApi;
+
+  @UI.identification: [ {
+    position: 80
+  } ]
+  @UI.lineItem: [ {
+    position: 80
+  } ]
+  @EndUserText.label: 'Created By'
+  CreatedByUser;
+
+  @UI.identification: [ {
+    position: 90
+  } ]
+  @UI.lineItem: [ {
+    position: 90
+  } ]
+  @EndUserText.label: 'Created On'
+  CreatedAt;
+
+  @UI.identification: [ {
+    position: 100 ,
+    label: 'Status',
+    criticality: 'Criticality'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 ,
+    label: 'Status',
+    criticality: 'Criticality'
+  } ]
+  @UI.textArrangement: #TEXT_FIRST
+  Status;
+
+  @UI.lineItem: [ {
+    position: 110 ,
+    label: 'Message'
+  } ]
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'Message'
+  } ]
+  @UI.multiLineText: true
+  Message;
+}

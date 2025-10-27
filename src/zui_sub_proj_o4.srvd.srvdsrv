@@ -1,0 +1,13 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_SUB_PROJ'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_SUB_PROJ'
+  }
+}
+define service ZUI_SUB_PROJ_O4
+  provider contracts odata_v4_ui {
+  expose ZC_SUB_PROJ     as SubProject;
+  expose ZC_SUB_PROJ_LOG as ChangeDocs;
+}

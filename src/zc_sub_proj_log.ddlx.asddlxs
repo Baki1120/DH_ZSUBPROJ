@@ -1,0 +1,152 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: { typeName: 'Change documents',
+                  typeNamePlural: 'Change documents',
+                  title: { type: #STANDARD, label: 'Change documents', value: 'objectid' },
+                  description: { type: #STANDARD, label: 'Change documents', value: 'objectid' } }
+
+annotate entity ZC_SUB_PROJ_LOG with
+
+{
+
+  @UI.facet: [ {
+      label: 'Detailed Log Information',
+      id: 'DetailedLog',
+      purpose: #STANDARD,
+      position: 10 ,
+      type: #IDENTIFICATION_REFERENCE
+    }  ]
+
+  @UI.hidden: true
+  objectid;
+
+  @UI.hidden: true
+  changenr;
+
+  @UI.hidden: true
+  tabname;
+
+  @UI.hidden: true
+  tabkey;
+
+  @EndUserText.label: 'Field Name '
+  @UI.identification: [ { position: 50, importance: #LOW } ]
+  @UI.lineItem: [ { position: 50, importance: #LOW } ]
+  @UI.hidden         : true
+  fname;
+
+  @EndUserText.label: 'Object Description'
+  objecttxt;
+
+  @EndUserText.label: 'Changed By'
+  @UI.identification: [ { position: 160 } ]
+  @UI.lineItem: [ { position: 160, importance: #HIGH } ]
+  username;
+
+  @UI.identification: [ { position: 170 } ]
+  @UI.lineItem: [ { position: 170, importance: #HIGH } ]
+  @EndUserText.label : 'Changed On'
+  utimestamp;
+
+  @EndUserText.label: 'User name of the person resp. in chg doc'
+  username_db;
+
+  @EndUserText.label: 'Creation date of the change document'
+  udate;
+
+  @EndUserText.label: 'Creation date of the change document '
+  udate_db;
+
+  @EndUserText.label: ' Time changed'
+  @UI.hidden: true
+  utime;
+
+  @EndUserText.label: 'Time changed'
+  @UI.hidden: true
+  utime_db;
+
+  @EndUserText.label: 'Transaction in which a change was made'
+  tcode;
+
+  @EndUserText.label: 'Application Object '
+  applname;
+
+  @EndUserText.label: 'Application Type'
+  appltype;
+
+  @EndUserText.label: 'Change document creation: Table name db '
+  tabname_db;
+
+  @EndUserText.label: 'Key of Modified Table Row '
+  tabkey_db;
+
+  @EndUserText.label: 'Table key length'
+  keylen;
+
+  @EndUserText.label: 'Type of Change'
+  chngind;
+
+  @EndUserText.label: 'Field Name '
+  @UI.hidden: true
+  fname_db;
+
+  @EndUserText.label: 'Field Name'
+  @UI.identification: [ { position: 50 } ]
+  @UI.lineItem: [ { position: 50, importance: #HIGH } ]
+  ftext;
+
+  @EndUserText.label: 'Create change document: Text type'
+  textart;
+
+  @EndUserText.label: 'Language Key'
+  sprache;
+
+  @EndUserText.label: 'Text change flag "X"'
+  text_case;
+
+  @EndUserText.label: 'Output length of the old and new value'
+  outlen;
+
+  @EndUserText.label: 'Old Value'
+  @UI.identification: [ { position: 150 } ]
+  @UI.lineItem: [ { position: 150, importance: #HIGH } ]
+  f_old;
+
+  @EndUserText.label: 'Old contents of changed field '
+  f_old_db;
+
+  @EndUserText.label: 'New Value'
+  @UI.identification: [ { position: 140 } ]
+  @UI.lineItem: [ { position: 140, importance: #HIGH } ]
+  f_new;
+
+  @EndUserText.label: 'New Field Content of Changed Field'
+  f_new_db;
+
+  @EndUserText.label: 'Old Extended Value (Short)'
+  value_shstr_old;
+
+  @EndUserText.label: 'Old Extended Value (Short)'
+  value_shstr_old_db;
+
+  @EndUserText.label: 'New Extended Value (Short)'
+  value_shstr_new;
+
+  @EndUserText.label: 'New Extended Value (Short)'
+  value_shstr_new_db;
+
+  @EndUserText.label: 'KEYGUID for Connection to CDPOS_UID'
+  keyguid;
+
+  @EndUserText.label: 'Key of Modified Table Row'
+  tabkey254;
+
+  @EndUserText.label: ''
+  tabkey254_db;
+
+  @EndUserText.label: 'Table key length'
+  ext_keylen;
+
+  @EndUserText.label: 'KEYGUID for Link to CDPOS_STR'
+  keyguid_str;
+}
